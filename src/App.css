@@ -1,0 +1,193 @@
+/* navegador */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color:  #00274b;
+  color: rgb(255, 255, 255);
+  padding: 10px 10px; /* Ajusta el espacio interno */
+  position: relative; /* Añadido para el posicionamiento */
+  transition: background-color 0.3s ease-in-out;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.navbar-brand h1 {
+  margin: 0;
+  font-size: 1.2em; /* Ajusta el tamaño del texto del logotipo */
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+@media (max-width: 500px) {
+
+  .navbar-brand h1 {
+    margin: 0;
+    font-size: 0.8em; /* Ajusta el tamaño del texto del logotipo */
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+.inputSearch {
+  border: 2px solid #000000; /* Borde ligero */
+  border-left: none;
+  border-top-left-radius: 25px; /* Bordes redondeados */
+  border-bottom-left-radius: 25px; /* Bordes redondeados */
+  padding: 10px 20px 10px 40px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de la tipografía */
+  background-color: white; /* Color de fondo */
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23999"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>'); /* Icono de lupa */
+  background-repeat: no-repeat; /* Evitar que el icono se repita */
+  background-position: 3px center; /* Posición del icono */
+  transition: border-color 0.2s; /* Transición suave del borde */
+}
+
+.inputSearch:focus {
+  outline: none; /* Elimina el contorno al enfocar */
+  border-color: #007bff; /* Cambia el color del borde al enfocar */
+}
+
+.inputSearch::placeholder {
+  color: #999999; /* Color del texto del placeholder */
+}
+
+.btnSearch {
+  background-color: #007bff; /* Azul Bootstrap */
+  color: white; /* Texto blanco */
+  border: none; /* Sin bordes */
+  padding: 10px 20px; /* Espaciado */
+  font-size: 16px; /* Tamaño de la tipografía */
+  border-top-right-radius: 25px; /* Bordes redondeados */
+  border-bottom-right-radius: 25px; /* Bordes redondeados */
+  border: 2px solid #007bff; /* Borde ligero */
+  cursor: pointer; /* Cursor en forma de mano */
+  transition: background-color 0.2s; /* Transición suave de fondo */
+}
+
+.btnSearch:hover {
+  background-color: #0056b3; /* Azul un poco más oscuro al pasar el mouse */
+}
+
+
+/* cartel grande  */
+.viewtrailer {
+  position: relative;
+  color: white;
+  overflow: hidden;
+  width: 100%; /* Asegura que el contenedor ocupe el ancho completo de la pantalla o del elemento padre */
+  height: 100vh; 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Alinea el contenido al final */
+  padding: 20px; /* Espacio alrededor del contenido */
+}
+
+.viewtrailer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 50%,
+    rgba(0, 0, 0, 0.7) 100%
+  );
+  z-index: 1;
+}
+
+/* Asegura que el contenido se muestre sobre el pseudo-elemento del gradiente */
+.viewtrailer > *, .container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.containertra {
+    margin-left: auto;
+    margin-right: auto;
+}
+.boton {
+  padding: 10px 20px; /* Ajusta el relleno para que el botón sea más grande y cómodo de clickear */
+  font-size: 16px; /* Tamaño de la letra */
+  color: #FFFFFF; /* Color de la letra */
+  background-color: #007bff; /* Color de fondo del botón, azul Bootstrap por defecto */
+  border: none; /* Elimina el borde predeterminado */
+  border-radius: 5px; /* Bordes redondeados para un look moderno */
+  cursor: pointer; /* Cambia el cursor a una mano para indicar que es clickeable */
+  transition: background-color 0.3s, transform 0.2s; /* Suaviza la transición de colores y transformaciones */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para darle profundidad */
+}
+
+.boton:hover, .boton:focus {
+  background-color: #0056b3; /* Oscurece el botón al pasar el ratón o al enfocarlo */
+  outline: none; /* Elimina el contorno que aparece al enfocar */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el ratón o enfocar */
+}
+
+.boton:active {
+  background-color: #004085; /* Hace el botón aún más oscuro al hacer clic */
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) inset; /* Cambia la sombra para dar efecto de presión */
+}
+
+.botonn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff; /* Color del texto */
+  background-color: #007bff; /* Color de fondo */
+  border: none;
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.botonn:hover {
+  background-color: #0056b3; /* Color de fondo al pasar el mouse */
+  transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}
+
+.botonn:focus {
+  outline: none; /* Elimina el borde de foco predeterminado para un look más limpio */
+}
+
+
+
+/*cartelera*/
+.containerrr {
+  padding: 20px;
+}
+
+.movie-img {
+  border-radius: 8px; /* Bordes redondeados para las imágenes */
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+  height: auto; /* Mantiene la proporción de aspecto original de la imagen */
+  transition: transform 0.3s ease; /* Transición suave para el efecto de zoom */
+}
+
+.movie-title {
+  margin-top: 20px; /* Espacio entre la imagen y el título */
+  font-size: 1.2rem; /* Tamaño del texto */
+  color: rgb(255, 255, 255); /* Color del texto */
+}
+
+.col-md-4:hover .movie-img {
+  transform: scale(1.05); /* Efecto de zoom ligero en la imagen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para resaltar */
+}
+
+.col-md-4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente */
+  cursor: pointer; /* Cambia el cursor para indicar que es clickeable */
+}
+
+.maa{
+  background:  #00274b;
+  padding-top: 25px;
+  color: #fff;
+}
